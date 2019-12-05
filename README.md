@@ -1,1 +1,0 @@
-# gmagino.github.io

@@ -1,43 +1,51 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css?family=Satisfy&display=swap" rel="stylesheet">
-    <title>Ice Cream Flavors</title>
-    <style media="screen">
-      h1 {
-        color:red;
-      }
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <style>
+        body { background-color:lightBlue; }
+        #snow{
+            background: none;
+            font-family: Androgyne;
+            background-image: url('/corndog-tile-1.png'), url('/corndog-tile.png'), url('/corndog-tile-2.png');
+            height: 100%;
+            left: 0;
+            position: absolute;
+            top: 0;
+            width: 100%;
+            z-index:1;
+            -webkit-animation: snow 1000s linear infinite;
+            -moz-animation: snow 1000s linear infinite;
+            -ms-animation: snow 1000s linear infinite;
+            animation: snow 1000s linear infinite;
+            -webkit-transform: translate3d(0,0,0);
+            -moz-transform: translate3d(0,0,0);
+            -ms-transform: translate3d(0,0,0);
+            -o-transform: translate3d(0,0,0);
+            transform: translate3d(0,0,0);
+        }
+        @keyframes snow {
+          0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
+          100% {background-position: 50000px 50000px, 10000px 20000px, -10000px 15000px;}
+        }
+        @-moz-keyframes snow {
+          0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
+          100% {background-position: 50000px 50000px, 10000px 20000px, -10000px 15000px;}
+        }
+        @-webkit-keyframes snow {
+          0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
+          100% {background-position: 50000px 50000px, 10000px 20000px, -10000px 15000px;}
+        }
+        @-ms-keyframes snow {
+          0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
+          100% {background-position: 50000px 50000px, 10000px 20000px, -10000px 15000px;}
+        }
     </style>
-  </head>
-  <body>
-    <div class="nav-bar">
-      <ul>
-    <li class="nav-bar-item"><a href="https://google.com">Home</a></li>
-    <li class="nav-bar-item"><a href="https://disneyland.com">News</a></li>
-    <li class="nav-bar-item"><a href="https://apple.com">About</a></li>
-  </ul>
-      </div>
-    <div style="width:50%;max-width: 500px;margin:auto;margin-bottom:50px;margin-top:50px;" class="card">
-      <h1 style="color:yellow;">Most Popular <br /> Ice Cream Flavors</h1>
-      <div>
-       <table>
-        <tr><th>Rank</th><th>Flavor</th></tr>
-        <tr><td>1</td><td>Vanilla</td></tr>
-        <tr><td>2</td><td>Strawberry</td></tr>
-        <tr><td>3</td><td>Chocolate</td></tr>
-        <tr><td>4</td><td>Cookies and Cream</td></tr>
-        <tr><td>5</td><td>Mint Chocolate Chip</td></tr>
-       </table>
-      </div>
-
-      <div style="text-align:center;">
-       <button id="myButton" type="button" name="button">Click Me</button>
-       <p id="myText">The button has not been clicked yet.</p>
-      </div>
-    </div>
-
-    </body>
-    <script src="script.js" charset="utf-8"></script>
+</head>
+<body>
+    <div id="snow">
+</div>
+</body>
 </html>
